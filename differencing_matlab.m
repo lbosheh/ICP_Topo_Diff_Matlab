@@ -73,7 +73,7 @@ p_trans(1,:)=post_x(b)-q1;p_trans(2,:)=post_y(b)-q2;p_trans(3,:)=post_z(b)-q3;
 %TT:Displacement 
 %ER:RMS error after each rotation
 %t: Calculations time per interation 
-[TR, TT, ER, t] = icp(p_trans,q_trans,'Minimize','plane');
+[TR, TT, ER, t] = icp(p_trans,q_trans,'Minimize','point');
 
 results(i,:) =[core_x(i) core_y(i) TT'];
 end
